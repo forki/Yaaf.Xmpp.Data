@@ -1,4 +1,4 @@
-﻿# Yaaf.AdvancedBuilding
+﻿# Yaaf.Xmpp.Runtime
 
 ## Contributing (Code)
 
@@ -15,6 +15,6 @@ See also https://help.github.com/articles/editing-files-in-your-repository/
 
 ## Licensing
 
-This project is subject to the terms and conditions defined in file ['LICENSE.md'](https://github.com/matthid/Yaaf.AdvancedBuilding/blob/develop/LICENSE.md), which is part of this source code package.
+This project is subject to the terms and conditions defined in file ['LICENSE.md'](https://github.com/matthid/Yaaf.Xmpp.Runtime/blob/develop/LICENSE.md), which is part of this source code package.
 
 You can find licenses of the programs this project depends on in either the "lib/$Project" folder or on their nuget page.

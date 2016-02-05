@@ -30,8 +30,8 @@ let buildConfig =
  { BuildConfiguration.Defaults with
     ProjectName = "Yaaf.Xmpp.Data"
     CopyrightNotice = "Yaaf.Xmpp.Data Copyright © Matthias Dittrich 2015"
-    ProjectSummary = "A helper library to easily add F# scripts to your application."
-    ProjectDescription = "This library builds on top of the FSharp.Compiler.Service library and provides a nice API for F# script integration. It provides APIs to push values into and to get values from scripts. Additionally it adds some extension methods missing from the FSharp.Compiler.Service API."
+    ProjectSummary = "Part of Yaaf.Xmpp (https://github.com/matthid/Yaaf.Xmpp.Runtime)."
+    ProjectDescription = "Part of Yaaf.Xmpp (https://github.com/matthid/Yaaf.Xmpp.Runtime)."
     ProjectAuthors = ["Matthias Dittrich"]
     NugetTags =  "fsharp scripting compiler host"
     PageAuthor = "Matthias Dittrich"
