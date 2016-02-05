@@ -1,0 +1,4 @@
+group Build
+NUnit
+NUnit.Runners
+FSharp.Core

@@ -1,0 +1,11 @@
+source https://nuget.org/api/v2
+
+nuget Yaaf.AdvancedBuilding
+
+group Build
+    source https://nuget.org/api/v2
+
+    nuget FSharp.Core
+    nuget NUnit
+    nuget NUnit.Runners
+    nuget Unquote
