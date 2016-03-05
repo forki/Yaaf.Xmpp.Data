@@ -15,6 +15,7 @@ NUGET
       FSharpVSPowerTools.Core (2.3.0)
 
 GROUP Net45
+REDIRECTS: ON
 NUGET
   remote: https://www.nuget.org/api/v2
   specs:

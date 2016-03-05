@@ -12,6 +12,12 @@
     The secound step is executing build.fsx which loads this file (for configuration), builds the solution and executes all unit tests.
 *)
 
+#if FAKE
+#else
+// Support when file is opened in Visual Studio
+#load "packages/Yaaf.AdvancedBuilding/content/buildConfigDef.fsx"
+#endif
+
 open BuildConfigDef
 open System.Collections.Generic
 open System.IO
@@ -33,10 +39,11 @@ let buildConfig =
     ProjectSummary = "Part of Yaaf.Xmpp (https://github.com/matthid/Yaaf.Xmpp.Runtime)."
     ProjectDescription = "Part of Yaaf.Xmpp (https://github.com/matthid/Yaaf.Xmpp.Runtime)."
     ProjectAuthors = ["Matthias Dittrich"]
-    NugetTags =  "fsharp scripting compiler host"
+    NugetTags =  "fsharp xmpp jabberid"
     PageAuthor = "Matthias Dittrich"
     GithubUser = "matthid"
     Version = release.NugetVersion
+    RestrictReleaseToWindows = false
     NugetPackages =
       [ "Yaaf.Xmpp.Data.nuspec", (fun config p ->
           { p with
@@ -55,6 +62,13 @@ let buildConfig =
       CreateFSharpAssemblyInfo "./src/SharedAssemblyInfo.fs" info)
     BuildTargets =
      [ { BuildParams.WithSolution with
+          // The default build
+          PlatformName = "Profile111"
+          SimpleBuildName = "profile111"
+          FindUnitTestDlls =
+            // Don't run on mono.
+            if isMono then (fun _ -> Seq.empty) else BuildParams.Empty.FindUnitTestDlls }
+       { BuildParams.WithSolution with
           // The generated templates
           PlatformName = "Net45"
           SimpleBuildName = "net45" } ]
