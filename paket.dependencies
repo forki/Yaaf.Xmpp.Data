@@ -10,3 +10,5 @@ group Net45
     nuget NUnit
     nuget NUnit.Runners
     nuget Unquote
+	nuget Foq content: none
+	nuget FsUnit

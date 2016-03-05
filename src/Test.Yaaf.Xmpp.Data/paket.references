@@ -2,3 +2,5 @@ group Net45
 NUnit
 NUnit.Runners
 FSharp.Core
+Foq
+FsUnit
