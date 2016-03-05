@@ -1,11 +1,15 @@
 source https://nuget.org/api/v2
 
 nuget Yaaf.AdvancedBuilding
+nuget NuGet.CommandLine
 
-group Build
+group Net45
     source https://nuget.org/api/v2
+	redirects: on
 
     nuget FSharp.Core
     nuget NUnit
     nuget NUnit.Runners
     nuget Unquote
+	nuget Foq content: none
+	nuget FsUnit

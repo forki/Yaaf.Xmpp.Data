@@ -12,6 +12,12 @@
     The secound step is executing build.fsx which loads this file (for configuration), builds the solution and executes all unit tests.
 *)
 
+#if FAKE
+#else
+// Support when file is opened in Visual Studio
+#load "packages/Yaaf.AdvancedBuilding/content/buildConfigDef.fsx"
+#endif
+
 open BuildConfigDef
 open System.Collections.Generic
 open System.IO
@@ -30,13 +36,14 @@ let buildConfig =
  { BuildConfiguration.Defaults with
     ProjectName = "Yaaf.Xmpp.Data"
     CopyrightNotice = "Yaaf.Xmpp.Data Copyright © Matthias Dittrich 2015"
-    ProjectSummary = "A helper library to easily add F# scripts to your application."
-    ProjectDescription = "This library builds on top of the FSharp.Compiler.Service library and provides a nice API for F# script integration. It provides APIs to push values into and to get values from scripts. Additionally it adds some extension methods missing from the FSharp.Compiler.Service API."
+    ProjectSummary = "Part of Yaaf.Xmpp (https://github.com/matthid/Yaaf.Xmpp.Runtime)."
+    ProjectDescription = "Part of Yaaf.Xmpp (https://github.com/matthid/Yaaf.Xmpp.Runtime)."
     ProjectAuthors = ["Matthias Dittrich"]
-    NugetTags =  "fsharp scripting compiler host"
+    NugetTags =  "fsharp xmpp jabberid"
     PageAuthor = "Matthias Dittrich"
     GithubUser = "matthid"
     Version = release.NugetVersion
+    RestrictReleaseToWindows = false
     NugetPackages =
       [ "Yaaf.Xmpp.Data.nuspec", (fun config p ->
           { p with
@@ -55,6 +62,13 @@ let buildConfig =
       CreateFSharpAssemblyInfo "./src/SharedAssemblyInfo.fs" info)
     BuildTargets =
      [ { BuildParams.WithSolution with
+          // The default build
+          PlatformName = "Profile111"
+          SimpleBuildName = "profile111"
+          FindUnitTestDlls =
+            // Don't run on mono.
+            if isMono then (fun _ -> Seq.empty) else BuildParams.Empty.FindUnitTestDlls }
+       { BuildParams.WithSolution with
           // The generated templates
           PlatformName = "Net45"
           SimpleBuildName = "net45" } ]

@@ -31,17 +31,27 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Net45 = Debug|Net45
+		Debug|Profile111 = Debug|Profile111
 		Release|Net45 = Release|Net45
+		Release|Profile111 = Release|Profile111
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Debug|Net45.ActiveCfg = Debug|Net45
 		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Debug|Net45.Build.0 = Debug|Net45
+		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Debug|Profile111.ActiveCfg = Debug|Profile111
+		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Debug|Profile111.Build.0 = Debug|Profile111
 		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Release|Net45.ActiveCfg = Release|Net45
 		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Release|Net45.Build.0 = Release|Net45
+		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Release|Profile111.ActiveCfg = Release|Profile111
+		{005A35E8-3F9C-405A-B5CE-44516B5E724D}.Release|Profile111.Build.0 = Release|Profile111
 		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Debug|Net45.ActiveCfg = Debug|Net45
 		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Debug|Net45.Build.0 = Debug|Net45
+		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Debug|Profile111.ActiveCfg = Debug|Profile111
+		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Debug|Profile111.Build.0 = Debug|Profile111
 		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Release|Net45.ActiveCfg = Release|Net45
 		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Release|Net45.Build.0 = Release|Net45
+		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Release|Profile111.ActiveCfg = Release|Profile111
+		{A3C77A61-5B58-47E1-9BA4-33205DD20355}.Release|Profile111.Build.0 = Release|Profile111
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

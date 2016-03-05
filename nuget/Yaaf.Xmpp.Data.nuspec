@@ -6,9 +6,9 @@
     <version>@build.number@</version>
     <authors>@authors@</authors>
     <owners>@authors@</owners>
-    <licenseUrl>https://github.com/matthid/Yaaf.FSharp.Helper/blob/develop/LICENSE.md</licenseUrl>
-    <projectUrl>https://github.com/matthid/Yaaf.FSharp.Helper</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/matthid/Yaaf.FSharp.Helper/master/doc/content/img/logo.png</iconUrl>
+    <licenseUrl>https://github.com/matthid/Yaaf.Xmpp.Data/blob/develop/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/matthid/Yaaf.Xmpp.Data</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/matthid/Yaaf.Xmpp.Data/master/doc/content/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>@summary@</summary>
     <description>@description@</description>
@@ -18,6 +18,8 @@
     <dependencies />
   </metadata>
   <files>
+    <file src="release/lib/profile111/Yaaf.Xmpp.Data.dll" target="lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1" />
+    <file src="release/lib/profile111/Yaaf.Xmpp.Data.xml" target="lib/portable-net45+netcore45+wpa81+MonoAndroid1+MonoTouch1" />
     <file src="release/lib/net45/Yaaf.Xmpp.Data.dll" target="lib/net45" />
     <file src="release/lib/net45/Yaaf.Xmpp.Data.xml" target="lib/net45" />
   </files>
